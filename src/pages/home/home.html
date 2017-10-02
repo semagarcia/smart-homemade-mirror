@@ -1,0 +1,17 @@
+<ion-content padding class="s-m-home">
+  <ion-grid>
+    <ion-row>
+      <!-- Left -->
+      <ion-col col-6 text-left>
+        <ion-row><ion-col class="s-m-date">{{ today | date: 'longDate' }}</ion-col></ion-row>
+        <ion-row><ion-col class="s-m-time">{{ today | date: 'mediumTime' }}</ion-col></ion-row>
+      </ion-col>
+
+      <!-- Right -->
+      <ion-col col-6>
+        <ion-row><ion-col text-right class="s-m-temp">12.3º</ion-col></ion-row>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
