@@ -8,6 +8,8 @@ yarn-error.log*
 # Ionic
 platforms
 plugins
+www
+.sourcemaps
 
 # Runtime data
 pids
