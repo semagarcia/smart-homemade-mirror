@@ -1,0 +1,37 @@
+//== Typography
+//
+@font-face {
+  font-family: 'Monoton';
+  src: url('./../../assets/fonts/Monoton-Regular.eot');
+  /* IE9 Compat Modes */
+  src: url('./../../assets/fonts/Monoton-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+  url('./../../assets/fonts/Monoton-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('./../../assets/fonts/Monoton-Regular.svg') format('svg');
+  /* Legacy iOS */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Iceland';
+  src: url('./../../assets/fonts/Iceland-Regular.eot');
+  /* IE9 Compat Modes */
+  src: url('./../../assets/fonts/Iceland-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+  url('./../../assets/fonts/Iceland-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('./../../assets/fonts/Iceland-Regular.svg') format('svg');
+  /* Legacy iOS */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('./../../assets/fonts/Pacifico-Regular.eot');
+  /* IE9 Compat Modes */
+  src: url('./../../assets/fonts/Pacifico-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+  url('./../../assets/fonts/Pacifico-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('./../../assets/fonts/Pacifico-Regular.svg') format('svg');
+  /* Legacy iOS */
+  font-weight: 400;
+  font-style: normal;
+}
