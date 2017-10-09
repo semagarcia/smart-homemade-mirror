@@ -7,8 +7,8 @@ import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 import { Insomnia } from '@ionic-native/insomnia';
 
 import { MyApp } from './app.component';
-import { HomePage } from './pages/home/home';
-import { NeonPage } from './pages/neon/neon';
+import { HomePage } from './../pages/home/home';
+import { NeonPage } from './../pages/neon/neon';
 
 @NgModule({
   declarations: [

@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 import { Insomnia } from '@ionic-native/insomnia';
 
-import { HomePage } from './pages/home/home';
+import { HomePage } from './../pages/home/home';
 @Component({
   templateUrl: 'app.html'
 })
