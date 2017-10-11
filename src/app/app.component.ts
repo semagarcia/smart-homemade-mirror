@@ -49,10 +49,10 @@ export class MyApp implements OnInit {
     const artyom = new Artyom();
 
     // Add command (Short code artisan way)
-    artyom.on(['prueba', 'termo']).then((i) => {
+    artyom.on(['soy normal', 'termo']).then((i) => {
       switch (i) {
         case 0:
-          artyom.say("esto es una prueba");
+          artyom.say("Todos sois normales excepto tu jefe, Jorge");
           break;
         case 1:
           artyom.say("esto es un termo");
@@ -70,7 +70,7 @@ export class MyApp implements OnInit {
       {
         indexes: ['Cómo te llamas'],
         action: (i) => {
-          artyom.say("Me llamo Pepe");
+          artyom.say("Me llamo Mario");
           
         }
       }
