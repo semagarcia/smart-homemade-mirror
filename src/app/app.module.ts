@@ -7,12 +7,14 @@ import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 import { Insomnia } from '@ionic-native/insomnia';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { HomePage } from './../pages/home/home';
+import { NeonPage } from './../pages/neon/neon';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    NeonPage
   ],
   imports: [
     BrowserModule,
@@ -21,14 +23,15 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    NeonPage
   ],
   providers: [
     AndroidFullScreen,
     Insomnia,
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

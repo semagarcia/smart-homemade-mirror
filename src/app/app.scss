@@ -1,6 +1,4 @@
 // http://ionicframework.com/docs/theming/
-
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,3 +12,32 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+@import "./styles/_fonts";
+@import "./styles/size";
+@import "./styles/_neon";
+.fnt-md {
+    font-size: 8em;
+}
+
+.s-m {
+    background-color: black;
+    color: white;
+ 
+    border: 2px solid #dadada;
+    border-radius: 7px;
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+.s-m-temp {
+    font-size: 5.5rem;
+}
+
+.s-m-date {
+    font-size: 1.8rem
+}
+
+.s-m-time {
+    font-size: 2.2rem;
+}

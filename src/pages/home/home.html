@@ -1,10 +1,10 @@
-<ion-content padding class="s-m-home">
+<ion-content padding class="s-m">
   <ion-grid fixed>
     <ion-row>
       <!-- Left -->
-      <ion-col col-6 text-left>
-        <ion-row><ion-col class="s-m-date">{{ today | date: 'longDate' }}</ion-col></ion-row>
-        <ion-row><ion-col class="s-m-time">{{ today | date: 'mediumTime' }}</ion-col></ion-row>
+      <ion-col col-6 text-left >
+        
+        <ion-row ><ion-col class="s-m-time">{{ today | date: 'mediumTime' }}</ion-col></ion-row>
       </ion-col>
 
       <!-- Right -->
@@ -17,14 +17,15 @@
     
     <ion-row align-items-end>
       <ion-col align-self-center>
-        <button ion-button block outline (tap)="onExit()">Exit</button>
+        <button ion-button block outline (tap)="pushPage()" class="neon-style neon-3 em em-2">Neon Page</button>
+      </ion-col>
+    </ion-row>
+    <ion-row align-items-end>
+      <ion-col align-self-center>
+        <button ion-button block outline (tap)="talk()" class="neon-style neon-3 em em-2">Hablar</button>
       </ion-col>
     </ion-row>
 
-    <!--<ion-footer>
-      <ion-toolbar>
-        <ion-title>Footer</ion-title>
-      </ion-toolbar>
-    </ion-footer>-->
+
   </ion-grid>
 </ion-content>

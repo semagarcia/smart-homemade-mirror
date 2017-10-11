@@ -1,16 +1,14 @@
-import { NeonPage } from './../neon/neon';
+import { HomePage } from './../home/home';
 import { App, ViewController } from 'ionic-angular';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
 import { Observable, Subscription } from 'rxjs/Rx';
-import Artyom from './../../app/shared/services/artyom.service';
-
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-neon',
+  templateUrl: 'neon.html'
 })
-export class HomePage implements  OnDestroy {
+export class NeonPage implements OnInit, OnDestroy {
 
   today: Date;
   timer$: Subscription;
@@ -18,7 +16,11 @@ export class HomePage implements  OnDestroy {
   constructor(public navCtrl: NavController, public viewCtrl: ViewController,
     public appCtrl: App, public platform: Platform) { }
 
-
+  ngOnInit() {
+    this.timer$ = Observable.timer(0, 1000).subscribe(
+      () => this.today = new Date()
+    );
+  }
 
   onExit() {
     this.platform.ready().then(() => {
@@ -35,7 +37,7 @@ export class HomePage implements  OnDestroy {
     // push another page onto the navigation stack
     // causing the nav controller to transition to the new page
     // optional data can also be passed to the pushed page.
-    this.navCtrl.push(NeonPage, {
+    this.navCtrl.push(HomePage, {
       id: "123",
       name: "Carl"
     });
