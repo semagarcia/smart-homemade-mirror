@@ -12,7 +12,7 @@
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve",
     "start": "npm run ionic:serve",
-    "compodoc": "./node_modules/.bin/compodoc -p tsconfig.json"    
+    "compodoc": "./node_modules/.bin/compodoc -p tsconfig.json"
   },
   "dependencies": {
     "@angular/common": "4.4.3",
@@ -46,6 +46,7 @@
   "devDependencies": {
     "@compodoc/compodoc": "^1.0.1",
     "@ionic/app-scripts": "3.0.0",
+    "compodoc": "0.0.41",
     "typescript": "2.3.4"
   },
   "description": "An Ionic project",
