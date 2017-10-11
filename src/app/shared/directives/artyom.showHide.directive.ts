@@ -52,7 +52,7 @@ export class ArtyomShowHideDirective implements OnInit {
 
     showHide(i) {
         console.log(this._finalCommand, this._finalCommand[i], i);
-        if (i > 0 && i < this._showLen) {
+        if (i >= 0 && i < this._showLen) {
             this._artyom.say(this._finalCommand[i]);
             if (this.el.nativeElement.getAttribute('hidden') !== null) {
                 this.el.nativeElement.removeAttribute('hidden');
