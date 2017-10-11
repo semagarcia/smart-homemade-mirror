@@ -45,10 +45,7 @@ export class MyApp implements OnInit {
     });
   }
   ngOnInit() {
-    // Create a variable that stores your instance
     const artyom = new Artyom();
-
-    // Add command (Short code artisan way)
     artyom.on(['soy normal', 'termo']).then((i) => {
       switch (i) {
         case 0:
@@ -60,12 +57,6 @@ export class MyApp implements OnInit {
       }
     });
 
-    // // Smart command (Short code artisan way), set the second parameter of .on to true
-    // artyom.on(['Repeat after me *'], true).then((i, wildcard) => {
-    //   artyom.say("You've said : " + wildcard);
-    // });
-
-    // or add some commandsDemostrations in the normal way
     artyom.addCommands([
       {
         indexes: ['Cómo te llamas'],
@@ -76,7 +67,6 @@ export class MyApp implements OnInit {
       }
     ]);
 
-    // Start the commands !
     artyom.initialize({
       lang: "es-ES", // GreatBritain english
       continuous: true, // Listen forever
@@ -84,10 +74,7 @@ export class MyApp implements OnInit {
       debug: true, // Show messages in the console
       executionKeyword: "empezar",
       listen: true, // Start to listen commands !
-
-      // If providen, you can only trigger a command if you say its name
-      // e.g to trigger Good Morning, you need to say "Jarvis Good Morning"
-      name: "comando"
+  name: "comando"
     }).then(() => {
       console.log("Artyom has been succesfully initialized");
     }).catch((err) => {
