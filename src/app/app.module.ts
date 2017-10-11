@@ -9,15 +9,21 @@ import { Insomnia } from '@ionic-native/insomnia';
 import { MyApp } from './app.component';
 import { HomePage } from './../pages/home/home';
 import { NeonPage } from './../pages/neon/neon';
+import { SharedModule } from './shared/shared.module';
+import { ArtyomAccessService } from './shared/services/artyon.access.service';
+import { ArtyomShowHideDirective } from './shared/directives/artyom.showHide.directive';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    NeonPage
+    NeonPage,
+    ArtyomShowHideDirective ,
+    
   ],
   imports: [
     BrowserModule,
+    SharedModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -28,6 +34,7 @@ import { NeonPage } from './../pages/neon/neon';
   ],
   providers: [
     AndroidFullScreen,
+    ArtyomAccessService,
     Insomnia,
     StatusBar,
     SplashScreen,

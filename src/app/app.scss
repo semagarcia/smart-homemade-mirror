@@ -41,3 +41,36 @@
 .s-m-time {
     font-size: 2.2rem;
 }
+
+
+$break-small: 400px;
+$break-large: 1200px;
+
+.manual {
+    /*==========  Mobile First Method  ==========*/
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+        font-size:3.5rem;
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+        font-size:4.5rem;
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+        font-size:4rem;
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+        font-size:4rem;
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+        font-size:4rem;
+    }
+}
+

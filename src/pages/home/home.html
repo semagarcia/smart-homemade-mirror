@@ -1,31 +1,28 @@
 <ion-content padding class="s-m">
   <ion-grid fixed>
     <ion-row>
-      <!-- Left -->
-      <ion-col col-6 text-left >
-        
-        <ion-row ><ion-col class="s-m-time">{{ today | date: 'mediumTime' }}</ion-col></ion-row>
-      </ion-col>
+      <ion-col [hidden]="true" [artyomDirective]="['la hora']" class="s-m-time">{{ today | date: 'HH:mm' }}</ion-col>
+      <ion-col [hidden]="true" [artyomDirective]="['tiempo', 'el tiempo']" text-right class="s-m-temp">12.3º</ion-col>
+    </ion-row>
 
-      <!-- Right -->
-      <ion-col col-6>
-        <ion-row><ion-col text-right class="s-m-temp">12.3º</ion-col></ion-row>
+    <ion-row>
+      <ion-col  [artyomDirective]="['instrucciones', 'manual', 'comandos']" text-right class="manual">
+          <p>
+            Para enseñar un widget pidele a max que te lo muestre con cualquiera de estas palabras. <br>"muéstrame", "me muestras", "quiero ver", "enseñame"
+          </p>
+          <p>
+            Para ocultarlo puedes pedirselo con "ocúltame", "quiero dejar de ver", "ya he visto"
+          </p>
       </ion-col>
     </ion-row>
 
-    <ion-row><ion-col></ion-col></ion-row>
-    
-    <ion-row align-items-end>
-      <ion-col align-self-center>
-        <button ion-button block outline (tap)="pushPage()" class="neon-style neon-3 em em-2">Neon Page</button>
+    <ion-row>
+      <ion-col [hidden]="true" [artyomDirective]="['notificaciones', 'novedades']" align-self-center>
+        <h1 class="neon-style neon-3 em em-2">
+          Notificaciones
+        </h1>
       </ion-col>
     </ion-row>
-    <ion-row align-items-end>
-      <ion-col align-self-center>
-        <button ion-button block outline (tap)="talk()" class="neon-style neon-3 em em-2">Hablar</button>
-      </ion-col>
-    </ion-row>
-
 
   </ion-grid>
 </ion-content>

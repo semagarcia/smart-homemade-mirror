@@ -3,22 +3,25 @@ import { App, ViewController } from 'ionic-angular';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
 import { Observable, Subscription } from 'rxjs/Rx';
-import Artyom from './../../app/shared/services/artyom.service';
 
+
+import { ArtyomAccessService } from './../../app/shared/services/artyon.access.service';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
-export class HomePage implements  OnDestroy {
+export class HomePage implements OnDestroy, OnInit {
 
-  today: Date;
+  today: Date = new Date();
   timer$: Subscription;
 
   constructor(public navCtrl: NavController, public viewCtrl: ViewController,
-    public appCtrl: App, public platform: Platform) { }
+    public appCtrl: App, public platform: Platform, private _artyon: ArtyomAccessService) { }
 
-
+  ngOnInit() {
+  //  this._artyon.say("Bienvenido al espejo interactivo. Para interactuar con su agente diga Max, y la instruccion");
+  }
 
   onExit() {
     this.platform.ready().then(() => {
