@@ -46,10 +46,10 @@ export class MyApp implements OnInit {
   }
   ngOnInit() {
     const artyom = new Artyom();
-    artyom.on(['soy normal', 'termo']).then((i) => {
+    artyom.on(['quién es yuli', 'termo']).then((i) => {
       switch (i) {
         case 0:
-          artyom.say("Todos sois normales excepto tu jefe, Jorge");
+          artyom.say("Es el amor de tu vida");
           break;
         case 1:
           artyom.say("esto es un termo");
