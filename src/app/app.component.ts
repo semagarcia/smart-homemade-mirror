@@ -16,7 +16,6 @@ import { HomePage } from './../pages/home/home';
 export class MyApp implements OnInit {
   rootPage: any = HomePage;
   timer$: Subscription;
-  today;
 
   constructor(private androidFullScreen: AndroidFullScreen,
     private insomnia: Insomnia,

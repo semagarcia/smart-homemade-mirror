@@ -1,18 +1,21 @@
 <ion-content padding class="s-m">
   <ion-grid fixed>
     <ion-row>
-      <ion-col [hidden]="true" [artyomShowHide]="['la hora']" class="s-m-time">{{ today | date: 'HH:mm' }}</ion-col>
+      <ion-col>
+          <watch></watch>
+      </ion-col>
       <ion-col [hidden]="true" [artyomShowHide]="['tiempo', 'el tiempo']" text-right class="s-m-temp">12.3º</ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col  [artyomShowHide]="['instrucciones', 'manual', 'comandos']" text-right class="manual">
-          <p>
-            Para enseñar un widget pidele a max que te lo muestre con cualquiera de estas palabras. <br>"muéstrame", "me muestras", "quiero ver", "enseñame"
-          </p>
-          <p>
-            Para ocultarlo puedes pedirselo con "ocúltame", "quiero dejar de ver", "ya he visto"
-          </p>
+      <ion-col [artyomShowHide]="['instrucciones', 'el manual', 'las instrucciones']" text-right class="manual">
+        <p>
+          Para enseñar un widget pidele a max que te lo muestre con cualquiera de estas palabras. <br>"muéstrame", "me muestras",
+          "quiero ver", "enseñame"
+        </p>
+        <p>
+          Para ocultarlo puedes pedirselo con "ocúltame", "quiero dejar de ver", "ya he visto"
+        </p>
       </ion-col>
     </ion-row>
 

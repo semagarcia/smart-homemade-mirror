@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 
 /**
  * Generated class for the WatchComponent component.
@@ -10,13 +13,19 @@ import { Component } from '@angular/core';
   selector: 'watch',
   templateUrl: 'watch.html'
 })
-export class WatchComponent {
+export class WatchComponent implements OnInit {
 
   text: string;
+  today: Date;
 
   constructor() {
     console.log('Hello WatchComponent Component');
     this.text = 'Hello World';
   }
 
+  ngOnInit() {
+    setInterval(() => {
+      this.today = new Date();
+    }, 500);
+  }
 }

@@ -1,4 +1,18 @@
 <!-- Generated template for the WatchComponent component -->
-<div>
-  {{text}}
+<div [hidden]="true" [artyomShowHide]="['la hora', 'el reloj']" class="s-m-time">
+  <span class="hour">
+    {{ today | date: 'HH' }}
+  </span>
+  <span class="doble-dots">
+    :
+  </span>
+  <span class="minutes">
+    {{ today | date: 'mm' }}
+  </span>
+  <span class="doble-dots">
+    :
+  </span>
+  <span class="seconds">
+      {{ today | date: 'ss' }}
+  </span>
 </div>

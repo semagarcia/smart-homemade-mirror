@@ -13,10 +13,10 @@ import { ArtyomAccessService } from './../../services/artyon/artyon.access.servi
 export class ArtyomShowHideDirective implements OnInit {
 
     @Input('artyomShowHide') command: [string];
-    private _show = ["muéstrame", "me muestras", "quiero ver", "enséñame"];
-    private _showing = ["mostrando", "te muestro", "ahí tienes", "enseñando"];
-    private _hidde = ["ocultame", "quiero dejar de ver", "ya he visto"];
-    private _hiding = ["ocultando", "dejando de ver", "ya no verás"];
+    private _show = ["muéstrame", "me muestras", "quiero ver", "enséñame", "me enseñas", "puedes mostrarme", "puedes enseñarme"];
+    private _showing = ["mostrando", "te muestro", "ahí tienes", "enseñando", "te enseño", "puedo mostrarte", "puedo enseñarte"];
+    private _hidde = ["ocultame", "quiero dejar de ver", "ya he visto", "puedes ocultar"];
+    private _hiding = ["ocultando", "dejando de ver", "ya no verás", "claro ahora oculto"];
     private _showLen: number;
     private _finalCommand: [string];
     constructor(private el: ElementRef,
