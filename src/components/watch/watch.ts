@@ -11,7 +11,10 @@ import {
  */
 @Component({
   selector: 'watch',
-  templateUrl: 'watch.html'
+  templateUrl: 'watch.html',
+  styleUrls: [
+    //'watch.scss'
+  ]
 })
 export class WatchComponent implements OnInit {
 
