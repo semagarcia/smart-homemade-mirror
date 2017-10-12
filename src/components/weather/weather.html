@@ -1,0 +1,20 @@
+<!-- Generated template for the WeatherComponent component -->
+<div class="weather" [hidden]="false" [artyomShowHide]="['tiempo', 'el tiempo']" text-right>
+  <div class="weather-right">
+
+    <p class="location">
+      <fa name="map-marker"></fa>
+      {{weather.location}}&deg;
+    </p>
+    <p class="temp">
+   <!--   <fa name="sun-o" class="neon-style neon-4 "></fa>
+      <fa name="snowflake-o"></fa>
+      <fa name="cloud"></fa> -->
+      <fa name="thermometer-half" class="neon-style neon-6 "></fa>
+      {{weather.temperature}}&deg;
+    </p>
+    <p class="rain">
+      Rain {{weather.precipitation}}%
+    </p>
+  </div>
+</div>
