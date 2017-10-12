@@ -29,6 +29,7 @@
     "@ionic-native/splash-screen": "3.12.1",
     "@ionic-native/status-bar": "3.12.1",
     "@ionic/storage": "2.0.1",
+    "angular-font-awesome": "^2.3.5",
     "cordova-android": "^6.2.3",
     "cordova-plugin-device": "^1.1.4",
     "cordova-plugin-fullscreen": "^1.2.0",

@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 import { Insomnia } from '@ionic-native/insomnia';
+import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
+
 
 import { MyApp } from './app.component';
 import { ComponentsModule } from './../components/components.module';
@@ -31,7 +33,8 @@ export const pagesComponent = [
     IonicModule.forRoot(MyApp),
     DirectivesModule,
     ServicesModule,
-    ComponentsModule
+    ComponentsModule,
+    AngularFontAwesomeModule
 
   ],
   bootstrap: [IonicApp],

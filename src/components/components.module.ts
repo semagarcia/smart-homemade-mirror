@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { WatchComponent } from './watch/watch';
 import { CommonModule } from '@angular/common';
+
+import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
+
 import { DirectivesModule } from './../directives/directives.module';
 import { IonicPageModule } from 'ionic-angular';
 import { ManualComponent } from './manual/manual';
@@ -13,7 +16,8 @@ import { WeatherComponent } from './weather/weather';
 	imports: [
 		CommonModule,
 		IonicPageModule.forChild(WatchComponent),
-		DirectivesModule
+		DirectivesModule,
+		AngularFontAwesomeModule
 	],
 	exports: [WatchComponent,
     ManualComponent,
