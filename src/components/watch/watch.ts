@@ -3,6 +3,7 @@ import {
   OnInit
 } from '@angular/core';
 
+import { Observable } from 'rxjs/Observable'
 /**
  * Generated class for the WatchComponent component.
  *
@@ -11,15 +12,16 @@ import {
  */
 @Component({
   selector: 'watch',
-  templateUrl: 'watch.html',
-  styleUrls: [
-    //'watch.scss'
-  ]
+  templateUrl: 'watch.html'
 })
 export class WatchComponent implements OnInit {
 
   text: string;
-  today: Date;
+
+  private data: Observable<Date>;
+  private today: Date;
+  private anyErrors: boolean;
+  private finished: boolean;
 
   constructor() {
     console.log('Hello WatchComponent Component');
@@ -27,8 +29,20 @@ export class WatchComponent implements OnInit {
   }
 
   ngOnInit() {
-    setInterval(() => {
-      this.today = new Date();
-    }, 500);
+    this.init();
   }
+
+  init() {
+    this.data = new Observable(observer => {
+      setInterval(() => {
+        observer.next(new Date());
+      }, 500);
+
+    });
+
+    let subscription = this.data.subscribe(
+      (value) => { this.today = value }
+    );
+  }
+
 }
