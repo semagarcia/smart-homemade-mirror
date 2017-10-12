@@ -2,7 +2,7 @@ import {
     Injectable
 } from '@angular/core';
 
-import Artyom from './../core/artyom.service';
+import Artyom from './../../core/artyom/artyom.service';
 
 @Injectable()
 export class ArtyomAccessService {

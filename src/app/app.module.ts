@@ -7,34 +7,41 @@ import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 import { Insomnia } from '@ionic-native/insomnia';
 
 import { MyApp } from './app.component';
+import { ComponentsModule } from './../components/components.module';
+import { DirectivesModule } from './../directives/directives.module';
+import { ServicesModule } from './../services/services.module';
+import {ArtyomShowHideDirective} from './../directives/artyom/artyom.showHide.directive';
+
 import { HomePage } from './../pages/home/home';
 import { NeonPage } from './../pages/neon/neon';
-import { SharedModule } from './shared/shared.module';
-import { ArtyomAccessService } from './shared/services/artyon.access.service';
-import { ArtyomShowHideDirective } from './shared/directives/artyom.showHide.directive';
+
+export const pagesComponent = [
+	HomePage,
+	NeonPage
+];
+
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    NeonPage,
-    ArtyomShowHideDirective ,
-    
+    pagesComponent
   ],
   imports: [
     BrowserModule,
-    SharedModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    DirectivesModule,
+    ServicesModule,
+    ComponentsModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    NeonPage
+    ...pagesComponent
   ],
   providers: [
     AndroidFullScreen,
-    ArtyomAccessService,
+    ArtyomShowHideDirective,
     Insomnia,
     StatusBar,
     SplashScreen,

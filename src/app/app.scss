@@ -12,9 +12,9 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-@import "./styles/_fonts";
-@import "./styles/size";
-@import "./styles/_neon";
+@import "./../theme/_fonts";
+@import "./../theme/size";
+@import "./../theme/_neon";
 .fnt-md {
     font-size: 8em;
 }

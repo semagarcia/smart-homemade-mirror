@@ -5,7 +5,7 @@ import { NavController, Platform } from 'ionic-angular';
 import { Observable, Subscription } from 'rxjs/Rx';
 
 
-import { ArtyomAccessService } from './../../app/shared/services/artyon.access.service';
+import { ArtyomAccessService } from './../../services/artyon/artyon.access.service';
 
 @Component({
   selector: 'page-home',
@@ -17,10 +17,10 @@ export class HomePage implements OnDestroy, OnInit {
   timer$: Subscription;
 
   constructor(public navCtrl: NavController, public viewCtrl: ViewController,
-    public appCtrl: App, public platform: Platform, private _artyon: ArtyomAccessService) { }
+    public appCtrl: App, public platform: Platform) { }
 
   ngOnInit() {
-  //  this._artyon.say("Bienvenido al espejo interactivo. Para interactuar con su agente diga Max, y la instruccion");
+
   }
 
   onExit() {
@@ -35,12 +35,6 @@ export class HomePage implements OnDestroy, OnInit {
 
 
   pushPage() {
-    // push another page onto the navigation stack
-    // causing the nav controller to transition to the new page
-    // optional data can also be passed to the pushed page.
-    this.navCtrl.push(NeonPage, {
-      id: "123",
-      name: "Carl"
-    });
+    this.navCtrl.push(NeonPage);
   }
 }
